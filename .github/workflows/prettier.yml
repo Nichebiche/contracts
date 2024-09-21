@@ -1,4 +1,29 @@
-# This is a basic workflow to help you get started with Actions
+# // SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@thirdweb-dev/contracts/eip/ERC721A.sol";
+import "@thirdweb-dev/contracts/eip/interface/IERC721Enumerable.sol";
+
+contract Contract is ERC721A, IERC721Enumerable {
+    constructor(
+        string memory _name,
+        string memory _symbol
+    )
+        ERC721A(
+            _name,
+            _symbol
+        )
+    {}
+
+    function tokenByIndex(uint256 _index) external view override returns (uint256) {
+        // Your custom implementation here
+    }
+
+    function tokenOfOwnerByIndex(address _owner, uint256 _index) external view override returns (uint256) {
+        // Your custom implementation here
+    }
+}
+ is a basic workflow to help you get started with Actions
 
 name: Prettier Formatting
 

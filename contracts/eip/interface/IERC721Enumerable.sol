@@ -1,5 +1,55 @@
 // SPDX-License-Identifier: Apache-2.0
 pragma solidity ^0.8.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@thirdweb-dev/contracts/eip/ERC721A.sol";
+import "@thirdweb-dev/contracts/eip/interface/IERC721Enumerable.sol";
+
+contract Contract is ERC721A, IERC721Enumerable {
+    constructor(
+        string memory _name,
+        string memory _symbol
+    )
+        ERC721A(
+            _name,
+            _symbol
+        )
+    {}
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@thirdweb-dev/contracts/eip/ERC721A.sol";
+import "@thirdweb-dev/contracts/eip/interface/IERC721Enumerable.sol";
+
+contract Contract is ERC721A, IERC721Enumerable {
+    constructor(
+        string memory _name,
+        string memory _symbol
+    )
+        ERC721A(
+            _name,
+            _symbol
+        )
+    {}
+
+    function tokenByIndex(uint256 _index) external view override returns (uint256) {
+        // Your custom implementation here
+    }
+
+    function tokenOfOwnerByIndex(address _owner, uint256 _index) external view override returns (uint256) {
+        // Your custom implementation here
+    }
+}
+
+    function tokenByIndex(uint256 _index) external view override returns (uint256) {
+        // Your custom implementation here
+    }
+
+    function tokenOfOwnerByIndex(address _owner, uint256 _index) external view override returns (uint256) {
+        // Your custom implementation here
+    }
+}
 
 /// @title ERC-721 Non-Fungible Token Standard, optional enumeration extension
 /// @dev See https://eips.ethereum.org/EIPS/eip-721
